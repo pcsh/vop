@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.dbyl.libarary.utils.Locator.ByType;
 public class BasePage {
     protected WebDriver driver;
     protected String[][] locatorMap;
@@ -19,7 +21,7 @@ public class BasePage {
         String[][] strLocatorMaps ={
         		{"LocatorName","element","waitsec","byType"},
         		{"[com.dbyl.libarary.china.pageAction.HomePage]","","",""},
-        		{"profile","//div[@class='novice-guide']","",""},
+        		{"profile1","//div[@class='novice-guide']","",""},
         		{"[com.dbyl.libarary.china.pageAction.LoginTestExample]","","",""},
         		{"loginEmailInputBox","username","10","name"},
         		{"loginButton","btn-submit","10","className"},
@@ -68,7 +70,7 @@ public class BasePage {
      */
     public WebElement getElement(WebDriver driver, Locator locator)
             throws IOException {
-        //locator = getLocator(locator.getElement());
+        locator = getLocator(locator.getElement());//从locatorMap中查中对应的元素
         WebElement e;
         
         switch (locator.getBy()) {
@@ -148,12 +150,17 @@ public class BasePage {
         return element;
     }
     public Locator getLocator(String locatorName) throws IOException {
-        Locator locator;
+        Locator locator = new Locator(locatorName);
         for (int i = 0; i < locatorMap.length; i++) {
-            if (locatorMap[i][0].endsWith(locatorName)) {
-            	System.out.println(locatorMap[i][1]);
-                return locator = new Locator(locatorMap[i][1]);
-            }
+            if (locatorMap[i][1].endsWith(locatorName)) {
+            	if(locatorMap[i][3]!=""){            		
+            		locator.setBy((ByType)Enum.valueOf(ByType.class, locatorMap[i][3]));
+            		return locator = new Locator(locatorMap[i][1],10,locator.getBy());
+            	}
+            	else
+            		return locator = new Locator(locatorMap[i][1]);
+                
+            }            
         }
         return locator = new Locator(locatorName);
     }
