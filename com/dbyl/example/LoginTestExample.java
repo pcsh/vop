@@ -22,10 +22,10 @@ public class LoginTestExample extends BasePage {
 		driver.manage().window().maximize();
 	}
 
-  Locator loginEmailInputBox = new Locator(locatorMap[4][1],10,ByType.name);  
-  Locator loginPasswordInputBox = new Locator(locatorMap[7][1],10,ByType.name);
-  Locator loginButton = new Locator(locatorMap[5][1],10,ByType.className);
-  Locator profile = new Locator(locatorMap[6][1]);//after login find information
+  Locator loginEmailInputBox = new Locator("username");//(locatorMap[4][1],10,ByType.name);  
+  Locator loginPasswordInputBox = new Locator("password");//(locatorMap[7][1],10,ByType.name);
+  Locator loginButton = new Locator("btn-submit");//(locatorMap[5][1],10,ByType.className);
+  Locator profile = new Locator("//div[@class='novice-guide']");//(locatorMap[6][1]);//after login find information
   
   public void typeEmailInputBox(String username) throws Exception{
 	  System.out.println("username is ...");

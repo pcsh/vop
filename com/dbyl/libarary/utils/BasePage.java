@@ -31,8 +31,7 @@ public class BasePage {
         locatorMap = strLocatorMaps;
     }
     protected void type(Locator locator, String values) throws Exception {
-    	System.out.println("type中的值："+values);
-    	System.out.println("定位类型："+locator.getBy()); 
+    	System.out.println("type中的值："+values);    	
     	System.out.println("定位中的元素信息："+locator.getElement()); 
     	WebElement e = findElement(driver, locator);//driver.findElement(By.name(locator.getElement()));//
         System.out.println("当前元素信息......");

@@ -47,7 +47,7 @@ public class AccountSystem {
 	      String strPwd = dbinitenv.envDB(env,0).get("strPwdP");
 	      Thread.sleep(2000);
 	      
-	      WebDriver driver = initenv.ChromeDriver();
+	      WebDriver driver = initenv.FirefoxDriver();
 	      
 	      
 	      LoginPage testa = new LoginPage();

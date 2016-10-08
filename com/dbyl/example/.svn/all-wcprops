@@ -7,7 +7,7 @@ LoginTestExample.java
 K 25
 svn:wc:ra_dav:version-url
 V 134
-/svn/IOFTesting/!svn/ver/285/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/example/LoginTestExample.java
+/svn/IOFTesting/!svn/ver/287/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/example/LoginTestExample.java
 END
 StringEndsWith.java
 K 25
@@ -20,6 +20,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 131
 /svn/IOFTesting/!svn/ver/252/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/example/SikuliExample.java
+END
+StringTOEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/IOFTesting/!svn/ver/287/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/example/StringTOEnum.java
 END
 TestBaseAssert.java
 K 25
@@ -73,7 +79,7 @@ AccountSystem.java
 K 25
 svn:wc:ra_dav:version-url
 V 131
-/svn/IOFTesting/!svn/ver/252/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/example/AccountSystem.java
+/svn/IOFTesting/!svn/ver/287/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/example/AccountSystem.java
 END
 ESLogin.java
 K 25
