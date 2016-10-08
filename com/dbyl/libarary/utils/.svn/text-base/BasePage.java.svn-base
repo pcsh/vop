@@ -18,7 +18,9 @@ public class BasePage {
         //System.out.println("获取Excel信息......");
         //locatorMap = ReadExcelUtil.getLocatorMap();
         System.out.println("获取UI库元素信息");
-        String[][] strLocatorMaps ={
+        String[][] strLocatorMaps = TxtToArray.createArray("./src/UILibrary.txt");
+        TxtToArray.printArray(strLocatorMaps);
+/*        	{
         		{"LocatorName","element","waitsec","byType"},
         		{"[com.dbyl.libarary.china.pageAction.HomePage]","","",""},
         		{"profile1","//div[@class='novice-guide']","",""},
@@ -27,7 +29,7 @@ public class BasePage {
         		{"loginButton","btn-submit","10","className"},
         		{"profile","//div[@class='novice-guide']","",""},
         		{"loginPasswordInputBox","password","10","name"}
-        };
+        };*/
         locatorMap = strLocatorMaps;
     }
     protected void type(Locator locator, String values) throws Exception {
@@ -151,15 +153,17 @@ public class BasePage {
     public Locator getLocator(String locatorName) throws IOException {
         Locator locator = new Locator(locatorName);
         for (int i = 0; i < locatorMap.length; i++) {
-            if (locatorMap[i][1].endsWith(locatorName)) {
-            	if(locatorMap[i][3]!=""){            		
+            if (locatorMap[i][1] != null) {
+            	if(locatorMap[i][1].endsWith(locatorName)){
+            	if(locatorMap[i][3] != null){            		
             		locator.setBy((ByType)Enum.valueOf(ByType.class, locatorMap[i][3]));
             		return locator = new Locator(locatorMap[i][1],10,locator.getBy());
             	}
             	else
             		return locator = new Locator(locatorMap[i][1]);
                 
-            }            
+            }  
+            }          
         }
         return locator = new Locator(locatorName);
     }

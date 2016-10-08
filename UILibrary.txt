@@ -1,0 +1,8 @@
+LocatorName,element,waitsec,byType
+[com.dbyl.libarary.china.pageAction.HomePage],,,
+profile1,//div[@class='novice-guide'],,
+[com.dbyl.libarary.china.pageAction.LoginTestExample],,,
+loginEmailInputBox,username,10,name
+loginButton,btn-submit,10,className
+profile,//div[@class='novice-guide'],,
+loginPasswordInputBox,password,10,name
