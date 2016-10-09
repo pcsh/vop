@@ -30,7 +30,7 @@ public class ESLogin {
 	  driver.findElement(By.id("textpassword")).sendKeys("123456");
 	  driver.findElement(By.id("loginBtn")).click();
 	  String actual =driver.getTitle();
-	  String expected = "大企业服务平台 -首页";
+	  String expected = "账e捷服务平台 -首页";
 	  String message = "验证title";
 	  //Assert.assertEquals(actual, expected, message);
 	  Assertion.verifyEquals(actual, expected, message);
