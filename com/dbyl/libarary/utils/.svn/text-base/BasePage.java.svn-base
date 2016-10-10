@@ -1,6 +1,7 @@
 package com.dbyl.libarary.utils;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -57,6 +58,12 @@ public class BasePage {
     public void setDriver(WebDriver driver) {
         this.driver = driver;
     }
+    
+    public void waitForPageLoad(){
+  	  getDriver().manage().timeouts()
+  	  .pageLoadTimeout(90, TimeUnit.SECONDS);
+    }
+    
     public WebElement getElement(Locator locator) throws IOException {
         return getElement(this.getDriver(), locator);
     }
