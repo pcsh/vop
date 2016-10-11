@@ -11,11 +11,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class zydLoginPageTestA extends BasePage{
-  protected zydLoginPageTestA(WebDriver driver) throws IOException {
-		super(driver);
+public class zydLoginPageTestA {
 
-	}
 @SuppressWarnings("static-access")
 @Test
   public static void LoginPage() throws Exception {
@@ -23,8 +20,18 @@ public class zydLoginPageTestA extends BasePage{
 	  zydLoginPage zlp = new zydLoginPage();
 	  zlp.login(driver, "http://172.16.6.151:9091/", "pancs_qd", "111111");
 	  zydPageExist zydpe = new zydPageExist();
-	  zydpe.PageExist("业务管理","企业","toolbarPluginbiz1020Frame",driver);
-      driver.findElement(By.id("queryDataId")).click();
+	  zydpe.PageExist("业务管理","企业","toolbarPluginbiz1020Frame",driver); 
+	  driver.findElement(By.id("queryDataId")).click();
+	  zydpe.PageExist("业务管理","企业","toolbarPluginbiz1020Frame",driver); 
+      zydpe.PageExist("统计分析","企业服务统计","toolbarPluginsta01Frame",driver);
+      zydpe.PageExist("统计分析","企业情况统计","toolbarPluginsta02Frame",driver);
+      zydpe.PageExist("统计分析","会计客户统计","toolbarPluginsta03Frame",driver);
+      zydpe.PageExist("统计分析","会计工作统计","toolbarPluginsta04Frame",driver);
+      zydpe.PageExist("统计分析","会计日常任务","toolbarPluginsta05Frame",driver);
+      zydpe.PageExist("统计分析","企业日常任务","toolbarPluginsta06Frame",driver);
+      zydpe.PageExist("统计分析","企业票据统计","toolbarPluginsta30Frame",driver);
+      zydpe.PageExist("统计分析","收款统计","toolbarPluginsta40Frame",driver);
+      zydpe.PageExist("统计分析","收款明细","toolbarPluginsta70Frame",driver);
       Thread.sleep(5000);
 	  driver.quit();
   }

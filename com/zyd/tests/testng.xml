@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="账益达"  preserve-order="true"  verbose="2" >
+   <test name="验证：登录页面，用户名和密码正确可以正常登录"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydLoginPageTestA" >
+            <methods>
+	            <include name="LoginPage"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
+   <test name="验证：业务管理-企业，页面能够正常打开"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydOpenCorpPageTest" >
+            <methods>
+	            <include name="OpenPage"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
+   <test name="验证：统计分析，九个页面都能正常打开"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydOpenStatisticsPageTest" >
+            <methods>
+	            <include name="OpenPage"/>
+            </methods>
+            </class>
+        </classes>
+    </test> 
+</suite>
