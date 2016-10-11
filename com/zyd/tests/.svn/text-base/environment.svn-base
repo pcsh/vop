@@ -1,0 +1,4 @@
+开发访问地址：
+http://172.16.6.151:9091
+开发数据库：	
+		qd.UserExist("jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev",name));

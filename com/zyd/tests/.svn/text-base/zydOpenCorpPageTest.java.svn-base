@@ -2,20 +2,25 @@ package com.zyd.tests;
 
 import org.testng.annotations.Test;
 
+import com.zyd.pages.zydCorp;
 import com.zyd.pages.zydLoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class zydLoginPageTestA {
+public class zydOpenCorpPageTest {
 
 /*
- * 验证：登录页面，用户名和密码正确可以正常登录
+ * 验证：业务管理-企业，页面能够正常打开
  */
+	
 @Test
-  public static void LoginPage() throws Exception {
+  public static void OpenPage() throws Exception {
 	  WebDriver driver = new FirefoxDriver();
 	  zydLoginPage zlp = new zydLoginPage();
 	  zlp.login(driver, "http://172.16.6.151:9091/", "pancs_qd", "111111");
+	  zydCorp zc = new zydCorp();
+	  zc.openPage(driver);
+	  zc.Query(driver);
 	  driver.quit();
   }
 
