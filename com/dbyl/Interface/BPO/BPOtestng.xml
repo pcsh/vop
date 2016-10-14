@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="账益达"  preserve-order="true"  verbose="2" >
+   <test name="验证：BPO传票相关接口功能"  preserve-order="true"   >
+        <classes>
+            <class name="com.dbyl.Interface.BPO.allBPOInterface" >
+            <methods>
+	            <include name="noBills"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
+</suite>
