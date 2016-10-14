@@ -19,7 +19,7 @@ public class allBPOInterface {
  /*
   * 无票通知
   */	
-  @Test 
+  //@Test 
   public void noBills() throws JSONException, IOException {
       HttpClient hc = new HttpClient();
       PostMethod method = null;
@@ -168,15 +168,16 @@ public class allBPOInterface {
   
   /*
    * 扫描前置客户端权限校验
+   * 返回：0-失败；1-成功
    */
- // @Test
+  @Test
   public void UserValidate() throws JSONException, IOException {
       HttpClient hc = new HttpClient();
       PostMethod method = null;
       System.out.println(" 扫描前置客户端权限校验");
       method = new PostMethod("http://test.vop.onlyou.com/interface/bpo/UserValidate.htm");
       JSONObject jsonObject = new JSONObject();
-      jsonObject.put("username", "pancs_qd");
+      jsonObject.put("username", "18788881139");
       jsonObject.put("password", "111111");
       String transJson = jsonObject.toString();
       RequestEntity se = new StringRequestEntity(transJson,"application/json","UTF-8");
@@ -196,5 +197,7 @@ public class allBPOInterface {
       System.out.println(new String(strBody));
       System.out.println("getStatusLine:"+method.getStatusLine());
   }
+  
+ 
  
 }

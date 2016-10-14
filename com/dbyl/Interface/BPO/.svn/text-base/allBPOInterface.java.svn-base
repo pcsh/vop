@@ -19,7 +19,7 @@ public class allBPOInterface {
  /*
   * 无票通知
   */	
- // @Test 
+  //@Test 
   public void noBills() throws JSONException, IOException {
       HttpClient hc = new HttpClient();
       PostMethod method = null;
@@ -27,9 +27,9 @@ public class allBPOInterface {
       //////////////////////////////////////////
       System.out.println("无票通知");
       //设置url以及json参数：
-      method = new PostMethod("http://test.vop.onlyou.com/interface/bpo/noBills.htm");	           
-      jsonObject.put("customerCode", "ffd92cf3256f464f973deccca5435c3e");
-      jsonObject.put("date","201508");
+      method = new PostMethod("http://172.16.6.151:9091/vop/interface/bpo/noBills.htm");	           
+      jsonObject.put("customerCode", "fe0620fc5f5841f9902c10ca530b7a4a");
+      jsonObject.put("date","201601");
       //////////////////////////////////////////
       String transJson = jsonObject.toString();
       System.out.println(transJson);
@@ -59,7 +59,7 @@ public class allBPOInterface {
    * "path":"/bills/086240201_2/1468679728809/201603/V204000023_3",
    * "date":"201603"}
    */
-  @Test 
+  //@Test 
   public void scanningFinished() throws JSONException, IOException {
       HttpClient hc = new HttpClient();
       PostMethod method = null;
@@ -145,8 +145,8 @@ public class allBPOInterface {
       PostMethod method = null;
       JSONObject jsonObject = new JSONObject();
       System.out.println("同步企业名录");
-      method = new PostMethod("http://test.vop.onlyou.com/interface/bpo/getCustomerList.htm");
-      jsonObject.put("lastSyncDate", "201501");
+      method = new PostMethod("http://172.16.6.151:9091/vop/interface/bpo/getCustomerList.htm");
+      jsonObject.put("lastSyncDate", "20161014");
       String transJson = jsonObject.toString();
       RequestEntity se = new StringRequestEntity(transJson,"application/json","UTF-8");
       method.setRequestEntity(se);
@@ -168,15 +168,16 @@ public class allBPOInterface {
   
   /*
    * 扫描前置客户端权限校验
+   * 返回：0-失败；1-成功
    */
- // @Test
+  @Test
   public void UserValidate() throws JSONException, IOException {
       HttpClient hc = new HttpClient();
       PostMethod method = null;
       System.out.println(" 扫描前置客户端权限校验");
       method = new PostMethod("http://test.vop.onlyou.com/interface/bpo/UserValidate.htm");
       JSONObject jsonObject = new JSONObject();
-      jsonObject.put("username", "pancs_qd");
+      jsonObject.put("username", "18788881139");
       jsonObject.put("password", "111111");
       String transJson = jsonObject.toString();
       RequestEntity se = new StringRequestEntity(transJson,"application/json","UTF-8");
@@ -196,5 +197,7 @@ public class allBPOInterface {
       System.out.println(new String(strBody));
       System.out.println("getStatusLine:"+method.getStatusLine());
   }
+  
+ 
  
 }
