@@ -17,8 +17,12 @@ public class getCustomerList {
 	            PostMethod method = null;
 	            JSONObject jsonObject = new JSONObject();
 	            //同步企业名录
-	            method = new PostMethod("http://test.vop.onlyou.com/interface/bpo/getCustomerList.htm");
-	            jsonObject.put("lastSyncDate", "201501");
+	            /*
+	             * zyd2.0:http://test.vop.onlyou.com/interface/bpo/getCustomerList.htm
+	             * zyd3.0:http://172.16.6.151:9091/vop/interface/bpo/getCustomerList.htm
+	             */
+	            method = new PostMethod("http://172.16.6.151:9091/vop/interface/bpo/getCustomerList.htm");
+	            jsonObject.put("lastSyncDate", "20161014");
 	            String transJson = jsonObject.toString();
 	            RequestEntity se = new StringRequestEntity(transJson,"application/json","UTF-8");
 	            method.setRequestEntity(se);

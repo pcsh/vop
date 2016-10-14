@@ -1,0 +1,11 @@
+------------------------------------------------------
+ZYD2.0
+zyd2.0SIT:
+  http://test.vop.onlyou.com/interface/bpo/getCustomerList.htm
+zyd2.0Beta&UAT:
+  http://beta.vop.onlyou.com/interface/bpo/getCustomerList.htm
+------------------------------------------------------
+ZYD3.0
+zyd3.0DEV&SIT:
+  http://172.16.6.151:9091/vop/interface/bpo/getCustomerList.htm
+------------------------------------------------------
