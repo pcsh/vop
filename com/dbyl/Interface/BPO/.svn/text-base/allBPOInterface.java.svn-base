@@ -169,6 +169,11 @@ public class allBPOInterface {
   /*
    * 扫描前置客户端权限校验
    * 返回：0-失败；1-成功
+   * 18890902222(123456):不用平台，不同用户名，每个平台有2个加盟商
+   * 18890901010（123456）：不同平台，不同用户名，每个平台有1个加盟商
+   * 18788881139：唯你网（111111）企业主渠道管理员；枫江（123456）渠道管理员
+   * pancs_op(111111)：运维人员
+   * pancs_qd(111111)：渠道管理员，一个平台多个加盟商
    */
   @Test
   public void UserValidate() throws JSONException, IOException {
@@ -177,15 +182,15 @@ public class allBPOInterface {
       System.out.println(" 扫描前置客户端权限校验");
       method = new PostMethod("http://test.vop.onlyou.com/interface/bpo/UserValidate.htm");
       JSONObject jsonObject = new JSONObject();
-      jsonObject.put("username", "18788881139");
-      jsonObject.put("password", "111111");
+      jsonObject.put("username", "18890902222");//18788881139;18890901010
+      jsonObject.put("password", "123456");
       String transJson = jsonObject.toString();
       RequestEntity se = new StringRequestEntity(transJson,"application/json","UTF-8");
       method.setRequestEntity(se);
       //使用系统提供的默认的恢复策略
       method.getParams().setParameter(HttpMethodParams.RETRY_HANDLER, new DefaultHttpMethodRetryHandler());
       //设置超时的时间
-      method.getParams().setParameter(HttpMethodParams.SO_TIMEOUT, 3000);	            
+      method.getParams().setParameter(HttpMethodParams.SO_TIMEOUT, 10000);	            
       hc.executeMethod(method);
       InputStream strStream = method.getResponseBodyAsStream();
       ByteArrayOutputStream   baos   =   new   ByteArrayOutputStream(); 
