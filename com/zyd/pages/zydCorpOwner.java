@@ -32,9 +32,9 @@ public class zydCorpOwner {
 	/*
 	 * 业务管理-企业主，查询数据库中企业主是否已经存在
 	 */
-	public Boolean QueryDatabaseCorpOwnerIsExist(String name,String union_id,String url,String username,String pwd) throws SQLException{
+	public Boolean QueryDatabaseCorpOwnerIsExist(String name,String Mobile,String Email,String union_id,String url,String username,String pwd) throws SQLException{
 		QueryData qd = new 	QueryData();		
-		if(qd.UserExist(url,username,pwd,name)){
+		if(qd.UserExist(url,username,pwd,name,Mobile,Email)){
 			return true;
 		}
 		else
@@ -46,10 +46,10 @@ public class zydCorpOwner {
 	/*
 	 * 业务管理-企业主，查询数据库中企业主是否已经存在
 	 */
-	public void DeleteCorpOwnerBySQL(String name,String union_id,String url,String username,String pwd) throws SQLException{
+	public void DeleteCorpOwnerBySQL(String name,String Mobile,String Email,String union_id,String url,String username,String pwd) throws SQLException{
 		QueryData qd = new 	QueryData();		
 		  String sql_vop ="delete from t_vop_ssm_user "
-				  +"where name = '"+name+"'";
+				  +"where name = '"+name+"' or mobile_phone_no ='"+Mobile+"' or email = '"+Email+"'";
 		//  String sql_onlyou="delete from t_onlyou_user "
 		//		  +"where name = '15880276011' or mobile_phone_no = '15880276011'";
 	      qd.DeleteData(url,username,pwd, sql_vop);

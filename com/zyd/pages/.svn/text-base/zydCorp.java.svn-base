@@ -1,8 +1,14 @@
 package com.zyd.pages;
 
+import java.sql.SQLException;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.dbyl.libarary.utils.QueryData;
 import com.dbyl.libarary.utils.zydPageExist;
 
 /*
@@ -25,6 +31,20 @@ public class zydCorp {
 		driver.findElement(By.id("queryDataId")).click();
 	}	
 
+	/*
+	 * 业务管理-企业主，查询数据库中企业主是否已经存在
+	 */
+	public Boolean QueryDatabaseCorpIsExist(String corpname,String union_id,String url,String username,String pwd) throws SQLException{
+		QueryData qd = new 	QueryData();		
+		if(qd.CorpExist(url,username,pwd,corpname)){
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
 	/*
 	 * 业务管理-企业，“新增”按钮
 	 */
@@ -67,7 +87,12 @@ public class zydCorp {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@name='orgName']")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//span[contains(text(),'"+corporg+"')][1]")).click();//"+strOrg+"
+		//定位一组元素
+		@SuppressWarnings("unchecked")
+		List<WebElement> allSpanTexts =
+				driver.findElements(By.xpath("//span[contains(text(),'"+corporg+"')]"));
+		//System.out.printf("%d\n", allSpanTexts.size());
+		allSpanTexts.get(allSpanTexts.size()-1).click();//"+strOrg+",选择页面的最后一个对象
 		Thread.sleep(5000);
 		driver.findElement(By.id("savebtn")).click();
 		Thread.sleep(1000);
@@ -83,4 +108,36 @@ public class zydCorp {
 		driver.findElement(By.xpath("//button[@clickaction='resetTableBtn']")).click();
 		Thread.sleep(2000);
 	}	
+	
+	/*从数据库删除对应的企业，合同，服务，任务
+	 * delete from t_vop_tsk_reg_task  where corp_id in (select corp.id from t_vop_cor_corp as corp where corp.name = 'autoqy') 
+	 * delete from t_vop_tsk_daily_work  where corp_id in (select corp.id from t_vop_cor_corp as corp where corp.name = 'autoqy') 
+	 * delete from t_vop_tsk_gl_task where corp_id in (select corp.id from t_vop_cor_corp as corp where corp.name = 'autoqy') 
+	 * delete from t_vop_svr_service where  corp_id in (select corp.id from t_vop_cor_corp as corp where corp.name = 'autoqy')
+	 * delete from t_vop_ord_order where corp_id in (select corp.id from t_vop_cor_corp as corp where corp.name = 'autoqy') 
+	 * delete from  t_vop_cor_corp where name = 'autoqy'
+	 * 业务管理-企业，从数据库中删除企业
+	 */
+	public void DeleteCorpBySQL(String name,String union_id,String url,String username,String pwd) throws SQLException{
+		QueryData qd = new 	QueryData();		
+		  String sql_vop_tsk1 ="delete from t_vop_tsk_reg_task  where corp_id in (select corp.id from t_vop_cor_corp as corp  "
+				  +"where corp.name = '"+name+"')";
+	      qd.DeleteData(url,username,pwd, sql_vop_tsk1);
+		  String sql_vop_tsk2 ="delete from t_vop_tsk_daily_work  where corp_id in (select corp.id from t_vop_cor_corp as corp  "
+				  +"where corp.name = '"+name+"')";
+	      qd.DeleteData(url,username,pwd, sql_vop_tsk2);
+		  String sql_vop_tsk3 ="delete from t_vop_tsk_gl_task  where corp_id in (select corp.id from t_vop_cor_corp as corp  "
+				  +"where corp.name = '"+name+"')";
+	      qd.DeleteData(url,username,pwd, sql_vop_tsk3);
+		  String sql_vop_tsk4 ="delete from t_vop_svr_service  where corp_id in (select corp.id from t_vop_cor_corp as corp  "
+				  +"where corp.name = '"+name+"')";
+	      qd.DeleteData(url,username,pwd, sql_vop_tsk4);
+		  String sql_vop_tsk5 ="delete from t_vop_ord_order  where corp_id in (select corp.id from t_vop_cor_corp as corp  "
+				  +"where corp.name = '"+name+"')";
+	      qd.DeleteData(url,username,pwd, sql_vop_tsk5);
+		  String sql_vop_tsk6 ="delete from t_vop_cor_corp as corp  "
+				  +"where corp.name = '"+name+"'";
+	      qd.DeleteData(url,username,pwd, sql_vop_tsk6);
+	      
+	}
 }

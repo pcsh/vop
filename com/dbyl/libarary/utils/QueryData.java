@@ -106,13 +106,13 @@ public class QueryData {
 	           }            
 	         //  rs.close();
 	         //  st.close();
-		} else {
+		} else {			
 			System.out.println("Failed to make connection!");
 		}
 		return UID;
 	}
 	
-	public Boolean UserExist(String url,String user,String pwd,String UserName) throws SQLException{
+	public Boolean UserExist(String url,String user,String pwd,String UserName,String Mobile,String Email) throws SQLException{
 		String UID = null;
 		try{
 			Class.forName("org.postgresql.Driver");
@@ -140,6 +140,72 @@ public class QueryData {
 			//System.out.println("You made it, take control your database now!");
 	          Statement st = (Statement) connection.createStatement();
 	           String sql = "select name from t_vop_ssm_user where name = '"+UserName+"' ORDER BY create_ts DESC limit 1";
+	        		   //"select ordernum from t_order where customerid in(select tc.customerid from t_customer tc where tc.userid in (select t.userid from t_user t where t.mpnumber = '"+mpnumber+"')) ORDER BY createtime DESC limit 1" ;
+	           ResultSet rs = ((java.sql.Statement) st).executeQuery(sql);
+	            while (rs.next())
+	            {
+	               //System.out.print(rs.getString(1));
+	               //System.out.println(rs.getString(2));
+	            	UID = rs.getString(1);
+	            	return true;
+	           }   
+		           String sql2 = "select name from t_vop_ssm_user where mobile_phone_no = '"+Mobile+"' ORDER BY create_ts DESC limit 1";
+        		   //"select ordernum from t_order where customerid in(select tc.customerid from t_customer tc where tc.userid in (select t.userid from t_user t where t.mpnumber = '"+mpnumber+"')) ORDER BY createtime DESC limit 1" ;
+           ResultSet rs2 = ((java.sql.Statement) st).executeQuery(sql2);
+            while (rs2.next())
+            {
+               //System.out.print(rs.getString(1));
+               //System.out.println(rs.getString(2));
+            	UID = rs2.getString(1);
+            	return true;
+           } 
+	           String sql3 = "select name from t_vop_ssm_user where email = '"+Email+"' ORDER BY create_ts DESC limit 1";
+ 		   //"select ordernum from t_order where customerid in(select tc.customerid from t_customer tc where tc.userid in (select t.userid from t_user t where t.mpnumber = '"+mpnumber+"')) ORDER BY createtime DESC limit 1" ;
+    ResultSet rs3 = ((java.sql.Statement) st).executeQuery(sql3);
+     while (rs3.next())
+     {
+        //System.out.print(rs.getString(1));
+        //System.out.println(rs.getString(2));
+     	UID = rs3.getString(1);
+     	return true;
+    } 
+	         //  rs.close();
+	         //  st.close();
+		} else {
+			System.out.println("Failed to make connection!");		
+		}
+		return false;
+		
+	}
+	
+	public Boolean CorpExist(String url,String user,String pwd,String CorpName) throws SQLException{
+		String UID = null;
+		try{
+			Class.forName("org.postgresql.Driver");
+		}catch(ClassNotFoundException e){
+			System.out.println("Where is your PostgreSQL JDBC Driver?"
+					+"Include in your library path!");
+			e.printStackTrace();
+			System.exit(0);			
+		}
+		Connection connection = null;
+
+		try {
+
+			connection = DriverManager.getConnection(url,user,pwd);
+					//"jdbc:postgresql://172.16.125.150:5432/onlyou3", "onlyyou","onlyyou-test");
+
+		} catch (SQLException e) {
+
+			System.out.println("Connection Failed! Check output console");
+			e.printStackTrace();
+			System.exit(0);
+		}
+
+		if (connection != null) {
+			//System.out.println("You made it, take control your database now!");
+	          Statement st = (Statement) connection.createStatement();
+	           String sql = "select name from t_vop_cor_corp where name = '"+CorpName+"' ORDER BY create_ts DESC limit 1";
 	        		   //"select ordernum from t_order where customerid in(select tc.customerid from t_customer tc where tc.userid in (select t.userid from t_user t where t.mpnumber = '"+mpnumber+"')) ORDER BY createtime DESC limit 1" ;
 	           ResultSet rs = ((java.sql.Statement) st).executeQuery(sql);
 	            while (rs.next())
