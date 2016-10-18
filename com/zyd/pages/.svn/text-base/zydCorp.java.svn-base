@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -92,7 +93,10 @@ public class zydCorp {
 		List<WebElement> allSpanTexts =
 				driver.findElements(By.xpath("//span[contains(text(),'"+corporg+"')]"));
 		//System.out.printf("%d\n", allSpanTexts.size());
-		allSpanTexts.get(allSpanTexts.size()-1).click();//"+strOrg+",选择页面的最后一个对象
+		Thread.sleep(2000);
+        JavascriptExecutor js1 = (JavascriptExecutor) driver;
+        WebElement webelement1 = allSpanTexts.get(allSpanTexts.size()-1);//"+strOrg+",选择页面的最后一个对象
+        js1.executeScript("arguments[0].click();",webelement1);		
 		Thread.sleep(5000);
 		driver.findElement(By.id("savebtn")).click();
 		Thread.sleep(1000);
