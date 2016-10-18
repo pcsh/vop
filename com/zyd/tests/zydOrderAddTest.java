@@ -23,9 +23,9 @@ public class zydOrderAddTest {
 	  zlp.login(driver, "http://172.16.6.151:9091/", "pancs_qd", "111111");
 	  zydCorpOwner zco = new zydCorpOwner();
 	  zco.openPage(driver);
-	  String corpowner = "有合同的企业qy";
-	  String Mobile = "18288889999";
-	  String Email = "18288889999@139.com";
+	  String corpowner = "qyownertest";
+	  String Mobile = "18211119999";
+	  String Email = "18211119999@139.com";
 	  boolean isUserExistBeforeAdd = zco.QueryDatabaseCorpOwnerIsExist(corpowner,Mobile, Email, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
 	  if(isUserExistBeforeAdd){
 		  zco.DeleteCorpOwnerBySQL(corpowner,Mobile, Email, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
@@ -33,7 +33,7 @@ public class zydOrderAddTest {
 	  zco.Add(driver, corpowner, Mobile, Email, "18181818");
 	  zydCorp zc = new zydCorp();
 	  zc.openPage(driver);	 
-	  String corpname = "autoqy";
+	  String corpname = "有合同的企业qy";
 	  String corporg = "onlyou4潘才胜注册的加盟商";
 	  boolean isCorpExistBeforeAdd = zc.QueryDatabaseCorpIsExist(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
 	  if(isCorpExistBeforeAdd){

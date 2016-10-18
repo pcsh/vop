@@ -1,12 +1,18 @@
 package com.dbyl.libarary.china.pageAction;
 
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.dbyl.libarary.utils.BasePage;
+import com.dbyl.libarary.utils.Locator;
+
 public class LoginPage {
 
-	  public WebDriver LoginManage(String strLoginM,String strPasswdM,WebDriver driver) throws InterruptedException
+ 	public WebDriver LoginManage(String strLoginM,String strPasswdM,WebDriver driver) throws InterruptedException
 	  {
 		     Thread.sleep(5000);
 		        WebElement username = driver.findElement(By.xpath("//*[@name='username']"));

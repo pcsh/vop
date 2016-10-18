@@ -66,15 +66,15 @@ public class zydOrder {
 		Thread.sleep(2000);
 //		driver.findElement(By.xpath("//*[@name='empName']")).sendKeys(Keys.ENTER);
 		Thread.sleep(2000);			
-		driver.findElement(By.linkText("下一步")).click();
+		driver.findElement(By.xpath("//button[@clickaction='step1']")).click();
 		//Thread.sleep(1000);
 		//driver.findElement(By.xpath("//*[@id='btnjqg1']/div")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@id='jqg1']/td[5]")).click();
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//*[@id='1_productName']")).sendKeys("代理记账");
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//*[@id='1_productName']")).sendKeys(Keys.ENTER);
+		driver.findElement(By.xpath("//*[@id='1_productName']")).click();//sendKeys("代理记账");
+		//Thread.sleep(1000);
+		driver.findElement(By.xpath("//td[contains(text(),'代理记账')]")).click();//sendKeys(Keys.ENTER);
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@id='jqg1']/td[6]")).click();
 		Thread.sleep(1000);
@@ -104,13 +104,13 @@ public class zydOrder {
 		Thread.sleep(1000);
 		//driver.findElement(By.xpath("//*[@id='jqg3']/td[15]")).sendKeys(Keys.ENTER);
 		//Thread.sleep(2000);
-		driver.findElement(By.linkText("下一步")).click();
+		driver.findElement(By.xpath("//button[@clickaction='step2']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.linkText("下一步")).click();
+		driver.findElement(By.xpath("//button[@clickaction='step3']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.linkText("下一步")).click();
+		driver.findElement(By.xpath("//button[@clickaction='step4']")).click();
 		Thread.sleep(5000);
-		driver.findElement(By.linkText("知道了")).click();
+		driver.findElement(By.xpath("//button[@clickaction='finishCreateOrder']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.name("searchText")).clear();
 		Thread.sleep(2000);
@@ -119,9 +119,9 @@ public class zydOrder {
 		driver.findElement(By.name("searchText")).click();
 		driver.findElement(By.name("searchText")).sendKeys(corpname);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[@clickaction='queryGirdData']")).click();
+		driver.findElement(By.xpath("//button[@clickaction='queryOrderGird']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[@clickaction='resetTableBtn']")).click();
+		driver.findElement(By.xpath("//button[@clickaction='resetOrderSearchForm']")).click();
 		Thread.sleep(2000);
 	}	
 	

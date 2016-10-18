@@ -1,13 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 130
-/svn/IOFTesting/!svn/ver/252/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/libarary/china/pageAction
+/svn/IOFTesting/!svn/ver/282/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/libarary/china/pageAction
 END
 UserManage.java
 K 25
 svn:wc:ra_dav:version-url
 V 146
 /svn/IOFTesting/!svn/ver/252/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/libarary/china/pageAction/UserManage.java
+END
+HomePage.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/IOFTesting/!svn/ver/282/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/libarary/china/pageAction/HomePage.java
 END
 Client.java
 K 25
@@ -20,6 +26,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 147
 /svn/IOFTesting/!svn/ver/252/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/libarary/china/pageAction/DailyRecord.java
+END
+LoginBasePage.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/IOFTesting/!svn/ver/282/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/libarary/china/pageAction/LoginBasePage.java
 END
 ClientOwner.java
 K 25
@@ -79,7 +91,7 @@ LoginPage.java
 K 25
 svn:wc:ra_dav:version-url
 V 145
-/svn/IOFTesting/!svn/ver/252/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/libarary/china/pageAction/LoginPage.java
+/svn/IOFTesting/!svn/ver/282/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/libarary/china/pageAction/LoginPage.java
 END
 TryingRecord.java
 K 25
