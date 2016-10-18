@@ -45,4 +45,13 @@
             </class>
         </classes>
     </test> 
+   <test name="Test006_验证：业务管理-合同，新增合同(有合同的企业qy)"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydOrderAddTest" >
+            <methods>
+	            <include name="OrderAdd"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
 </suite>

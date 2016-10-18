@@ -224,6 +224,52 @@ public class QueryData {
 		
 	}
 	
+	public Boolean OrderExist(String url,String user,String pwd,String CorpName) throws SQLException{
+		String UID = null;
+		try{
+			Class.forName("org.postgresql.Driver");
+		}catch(ClassNotFoundException e){
+			System.out.println("Where is your PostgreSQL JDBC Driver?"
+					+"Include in your library path!");
+			e.printStackTrace();
+			System.exit(0);			
+		}
+		Connection connection = null;
+
+		try {
+
+			connection = DriverManager.getConnection(url,user,pwd);
+					//"jdbc:postgresql://172.16.125.150:5432/onlyou3", "onlyyou","onlyyou-test");
+
+		} catch (SQLException e) {
+
+			System.out.println("Connection Failed! Check output console");
+			e.printStackTrace();
+			System.exit(0);
+		}
+
+		if (connection != null) {
+			//System.out.println("You made it, take control your database now!");
+	          Statement st = (Statement) connection.createStatement();
+	           String sql = "select order_code from t_vop_ord_order where corp_id in (select id from t_vop_cor_corp where name = '"+CorpName+"') ORDER BY create_ts DESC limit 1";
+	        		   //"select ordernum from t_order where customerid in(select tc.customerid from t_customer tc where tc.userid in (select t.userid from t_user t where t.mpnumber = '"+mpnumber+"')) ORDER BY createtime DESC limit 1" ;
+	           ResultSet rs = ((java.sql.Statement) st).executeQuery(sql);
+	            while (rs.next())
+	            {
+	               //System.out.print(rs.getString(1));
+	               //System.out.println(rs.getString(2));
+	            	UID = rs.getString(1);
+	            	return true;
+	           }            
+	         //  rs.close();
+	         //  st.close();
+		} else {
+			System.out.println("Failed to make connection!");		
+		}
+		return false;
+		
+	}
+	
 	public void DeleteData(String url,String user,String pwd,String sql) throws SQLException{
 		String NewOrderNum = null;
 		try {

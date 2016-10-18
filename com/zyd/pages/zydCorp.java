@@ -138,6 +138,12 @@ public class zydCorp {
 		  String sql_vop_tsk6 ="delete from t_vop_cor_corp as corp  "
 				  +"where corp.name = '"+name+"'";
 	      qd.DeleteData(url,username,pwd, sql_vop_tsk6);
+		  String sql_vop_tsk7 ="delete from t_vop_amt_pay_plan  where corp_id in (select corp.id from t_vop_cor_corp as corp  "
+				  +"where corp.name = '"+name+"')";
+	      qd.DeleteData(url,username,pwd, sql_vop_tsk7);
+		  String sql_vop_tsk8 ="delete from t_vop_amt_pay_plan_detail where service_id in (select id from t_vop_svr_service where corp_id in (select corp.id from t_vop_cor_corp as corp  "
+				  +"where corp.name = '"+name+"'))";
+	      qd.DeleteData(url,username,pwd, sql_vop_tsk8);
 	      
 	}
 }
