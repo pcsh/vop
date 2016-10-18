@@ -72,7 +72,7 @@ public class zydCorpOwner {
 		driver.findElement(By.name("qq")).click();
 		driver.findElement(By.name("qq")).sendKeys(qq);
 		driver.findElement(By.id("savebtn")).click();
-		Thread.sleep(2000);			
+		Thread.sleep(3000);			
 	}	
 
 }

@@ -119,9 +119,9 @@ public class zydOrder {
 		driver.findElement(By.name("searchText")).click();
 		driver.findElement(By.name("searchText")).sendKeys(corpname);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[@clickaction='queryOrderGird']")).click();
+		driver.findElement(By.xpath("//a[@clickaction='queryOrderGrid']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[@clickaction='resetOrderSearchForm']")).click();
+//		driver.findElement(By.xpath("//a[@clickaction='resetOrderSearchForm']")).click();
 		Thread.sleep(2000);
 	}	
 	
