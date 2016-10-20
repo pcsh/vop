@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 109
-/svn/IOFTesting/!svn/ver/316/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests
+/svn/IOFTesting/!svn/ver/324/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests
 END
 environment
 K 25
@@ -9,17 +9,17 @@ svn:wc:ra_dav:version-url
 V 121
 /svn/IOFTesting/!svn/ver/299/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/environment
 END
+FunctionTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/IOFTesting/!svn/ver/324/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/FunctionTest.xml
+END
 zydLoginPageTestA.java
 K 25
 svn:wc:ra_dav:version-url
 V 132
 /svn/IOFTesting/!svn/ver/298/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydLoginPageTestA.java
-END
-testng.xml
-K 25
-svn:wc:ra_dav:version-url
-V 120
-/svn/IOFTesting/!svn/ver/315/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/testng.xml
 END
 zydOpenCorpPageTest.java
 K 25
@@ -32,6 +32,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 130
 /svn/IOFTesting/!svn/ver/316/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydOrderAddTest.java
+END
+zydOpenPartnerInfoPageTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/IOFTesting/!svn/ver/326/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydOpenPartnerInfoPageTest.java
 END
 zydCorpOwnerPageTest.java
 K 25

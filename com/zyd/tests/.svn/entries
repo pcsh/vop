@@ -1,14 +1,14 @@
 10
 
 dir
-318
+324
 https://172.16.6.24/svn/IOFTesting/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests
 https://172.16.6.24/svn/IOFTesting
 
 
 
-2016-10-18T09:10:00.905375Z
-316
+2016-10-19T09:48:17.030375Z
+324
 pancs
 
 
@@ -32,6 +32,40 @@ cee79a17-85b5-b647-b491-6d296b40183b
 
 
 0
+
+FunctionTest.xml
+file
+
+
+
+
+2016-10-20T02:24:47.000000Z
+2ea742eac2bfb4f39f32d401bed1085d
+2016-10-19T09:48:17.030375Z
+324
+pancs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2203
 
 environment
 file
@@ -66,40 +100,6 @@ pancs
 
 
 157
-
-testng.xml
-file
-
-
-
-
-2016-10-18T08:26:57.000000Z
-5d9ca988a35ffd057814dff0429f806f
-2016-10-18T08:42:45.733500Z
-315
-pancs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2188
 
 zydCorpAddTest.java
 file
@@ -236,6 +236,40 @@ pancs
 
 
 635
+
+zydOpenPartnerInfoPageTest.java
+file
+326
+
+
+
+2016-10-20T03:03:50.000000Z
+889a51ca7199ff0a30072ed6688e711d
+2016-10-20T03:55:18.764750Z
+326
+pancs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+811
 
 zydOpenStatisticsPageTest.java
 file
