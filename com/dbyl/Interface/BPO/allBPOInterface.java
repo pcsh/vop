@@ -182,7 +182,7 @@ public class allBPOInterface {
       System.out.println(" 扫描前置客户端权限校验");
       method = new PostMethod("http://test.vop.onlyou.com/interface/bpo/UserValidate.htm");
       JSONObject jsonObject = new JSONObject();
-      jsonObject.put("username", "18890902222");//18788881139;18890901010
+      jsonObject.put("username", "18890902233");//18788881139;18890901010
       jsonObject.put("password", "123456");
       String transJson = jsonObject.toString();
       RequestEntity se = new StringRequestEntity(transJson,"application/json","UTF-8");
