@@ -27,6 +27,9 @@ public class zydPartnerInfo {
 	
 	/*
 	 * 渠道管理-基础信息维护，“查询渠道名称”
+	 * 通过JS方式获取input属性里面的值
+	 * document.getElementById获取ID唯一的那个值
+	 * document.getElementsByName获取name值一样的那一组值，[0]获取第一个值
 	 */
 	public String QueryPartnerName(WebDriver driver){
 		String partnername = (String)((JavascriptExecutor)driver).executeScript("return document.getElementsByName('name')[0].value");
