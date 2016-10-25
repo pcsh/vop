@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -54,13 +55,17 @@ public class zydOrder {
 		driver.findElement(By.xpath("//*[@name='corpName']")).click();
 		driver.findElement(By.xpath("//*[@name='corpName']")).sendKeys(corpname);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//*[@name='corpName']")).sendKeys(Keys.ENTER);
-		Thread.sleep(2000);
+        JavascriptExecutor js1 = (JavascriptExecutor) driver;
+		WebElement webelement1 = driver.findElement(By.xpath("//td[contains(text(),'"+corpname+"')]"));
+		js1.executeScript("arguments[0].click();",webelement1);
+
+//		driver.findElement(By.xpath("//*[@name='corpName']")).sendKeys(Keys.ENTER);
+//		Thread.sleep(2000);
 //	    driver.findElement(By.xpath("//*[@name='empName']")).click();
 //		driver.findElement(By.xpath("//*[@name='empName']")).sendKeys("李晓11");
 //		driver.findElement(By.xpath("//*[@name='empName']")).clear();				
 //		driver.findElement(By.xpath("//*[@name='empName']")).sendKeys("李晓");
-//		Thread.sleep(2000);
+		Thread.sleep(1000);
 		driver.findElement(By.name("customerOrderNum")).click();
 		driver.findElement(By.name("customerOrderNum")).sendKeys("CUSORD00001");
 		Thread.sleep(2000);
