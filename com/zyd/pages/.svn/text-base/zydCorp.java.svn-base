@@ -109,8 +109,8 @@ public class zydCorp {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@clickaction='queryGirdData']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[@clickaction='resetTableBtn']")).click();
-		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//button[@clickaction='resetTableBtn']")).click();
+//		Thread.sleep(2000);
 	}	
 	
 	/*从数据库删除对应的企业，合同，服务，任务

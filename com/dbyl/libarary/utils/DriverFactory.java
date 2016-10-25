@@ -38,7 +38,7 @@ public class DriverFactory {
 		else if(drivernum == 2)
 		{
 			//Selenium3
-			System.setProperty("webdriver.gecko.driver", "E:\\selenium\\3.00\\geckodriver-v0.11.1-win32\\geckodriver.exe");
+			//System.setProperty("webdriver.gecko.driver", "E:\\selenium\\3.00\\geckodriver-v0.11.1-win32\\geckodriver.exe");
 			//Selenium3
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();

@@ -97,6 +97,9 @@ has-props
 com
 dir
 
+demo
+dir
+
 git.sh
 file
 
