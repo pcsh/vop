@@ -1,13 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 95
-/svn/IOFTesting/!svn/ver/324/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src
+/svn/IOFTesting/!svn/ver/338/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src
 END
 git.sh
 K 25
 svn:wc:ra_dav:version-url
 V 102
 /svn/IOFTesting/!svn/ver/288/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/git.sh
+END
+自动化测试用例集.xls
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/svn/IOFTesting/!svn/ver/335/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E9%9B%86.xls
 END
 log4j.properties
 K 25

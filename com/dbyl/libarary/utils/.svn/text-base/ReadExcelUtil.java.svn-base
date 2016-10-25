@@ -11,14 +11,14 @@ import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 public class ReadExcelUtil {
-    static String path;
+    //static String path;
     /**
      * @author Young
      * @return
      * @throws IOException
      */
-    public static String[][] getLocatorMap() throws IOException {
-        path = "C:/Users/UILibrary.xls";
+    public static String[][] getLocatorMap(String path) throws IOException {
+        //path = "./src/UILibrary.xls";
         File f1 = new File(path);
         FileInputStream in = new FileInputStream(f1);
         HSSFWorkbook wb = new HSSFWorkbook(new POIFSFileSystem(in));
