@@ -15,6 +15,7 @@ import com.zyd.pages.zydGatherStatistics;
 import com.zyd.pages.zydLoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 public class zydOpenStatisticsPageTest {
 
@@ -23,6 +24,8 @@ public class zydOpenStatisticsPageTest {
 	 */
 @Test
   public static void OpenPage() throws Exception {
+	FirefoxProfile profile = new FirefoxProfile();
+	profile.setEnableNativeEvents(false);
 	  WebDriver driver = new FirefoxDriver();
 	  zydLoginPage zlp = new zydLoginPage();
 	  zlp.login(driver, "http://172.16.6.151:9091/", "pancs_qd", "111111");

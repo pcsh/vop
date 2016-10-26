@@ -10,6 +10,7 @@ import com.zyd.pages.zydPartnerInfo;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 public class zydCorpAddTest {
 
@@ -18,6 +19,8 @@ public class zydCorpAddTest {
  */
 @Test
   public static void CorpAdd() throws Exception {
+	FirefoxProfile profile = new FirefoxProfile();
+	profile.setEnableNativeEvents(false);
 	  WebDriver driver = new FirefoxDriver();
 	  zydLoginPage zlp = new zydLoginPage();
 	  zlp.login(driver, "http://172.16.6.151:9091/", "pancs_qd", "111111");

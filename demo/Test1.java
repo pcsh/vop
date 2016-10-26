@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 public class Test1 {
 
@@ -79,6 +80,8 @@ public class Test1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.gecko.driver", "E:\\selenium\\3.00\\geckodriver-v0.11.1-win32\\geckodriver.exe");
+		FirefoxProfile profile = new FirefoxProfile();
+		profile.setEnableNativeEvents(false);
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://zyd.onlyou.com");
 
