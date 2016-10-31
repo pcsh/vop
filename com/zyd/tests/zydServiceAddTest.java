@@ -25,7 +25,7 @@ public class zydServiceAddTest {
 	profile.setEnableNativeEvents(false);
 	  WebDriver driver = new FirefoxDriver();
 	  zydLoginPage zlp = new zydLoginPage();
-	  zlp.login(driver, "http://172.16.6.151:9091/", "pancs_qd", "111111");
+	  zlp.login(driver, "http://172.16.11.49:8081/", "pancs_qd", "111111");
 	  zydCorpOwner zco = new zydCorpOwner();
 	  zco.openPage(driver);
 	  String corpowner = "qyserviceaddtest";
@@ -47,12 +47,16 @@ public class zydServiceAddTest {
 		  zc.DeleteCorpBySQL(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
 	  }	
 	  //zc.DeleteCorpBySQL(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
+	  zc.openPage(driver);
 	  zc.Add(driver, corpowner, corpname, corporg);
 	  Thread.sleep(5000);
 	  boolean isCorpExistAfterAdd = zc.QueryDatabaseCorpIsExist(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
 	  Assert.assertTrue(isCorpExistAfterAdd);  
 	  zydService zs = new zydService();
-	  zs.Add(driver, corpname);
+	  zs.openPage(driver);
+	  zs.AddAcc(driver, corpname);
+	  zs.openPage(driver);
+	  zs.AddReg(driver, corpname);
 	  driver.quit();
   }
 
