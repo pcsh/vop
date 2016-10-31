@@ -84,6 +84,7 @@ public class Test1 {
 		profile.setEnableNativeEvents(false);
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://zyd.onlyou.com");
+		driver.findElement(By.xpath("//*[@id='imageSearchBtn']")).click();
 
 		List<WebElement> allImages = findAllLinks(driver); 
 
