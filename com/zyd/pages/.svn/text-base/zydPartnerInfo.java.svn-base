@@ -22,7 +22,7 @@ public class zydPartnerInfo {
 	@SuppressWarnings("static-access")
 	public void openPage(WebDriver driver) throws InterruptedException{
 		zydPageExist zydpe = new zydPageExist();
-		zydpe.PageExist("渠道管理","基础信息维护","toolbarPluginpnm10Frame",driver); 		
+		zydpe.PageExist("设置与参数","基础信息","toolbarPluginpnm10Frame",driver); 		
 	}
 	
 	/*

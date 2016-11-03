@@ -22,7 +22,7 @@ public class zydCorp {
 	@SuppressWarnings("static-access")
 	public void openPage(WebDriver driver) throws InterruptedException{
 		zydPageExist zydpe = new zydPageExist();
-		zydpe.PageExist("业务管理","企业","toolbarPluginbiz1020Frame",driver); 		
+		zydpe.PageExist("客户与合同","企业","toolbarPluginbiz1020Frame",driver); 		
 	}
 	
 	/*
@@ -53,8 +53,10 @@ public class zydCorp {
 		driver.findElement(By.id("aAdd")).click();
 		driver.findElement(By.xpath("//*[@name='ownerName']")).click();
 		driver.findElement(By.xpath("//*[@name='ownerName']")).sendKeys(corpowner);
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='ownerName']")).sendKeys(Keys.ENTER);
+		Thread.sleep(1000);
+        JavascriptExecutor js6 = (JavascriptExecutor) driver;
+		WebElement webelement6 = driver.findElement(By.xpath("//td[contains(text(),'"+corpowner+"')]"));
+		js6.executeScript("arguments[0].click();",webelement6);
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@name='name' and @placeholder='请输入企业名称']")).click();
 		driver.findElement(By.xpath("//*[@name='name' and @placeholder='请输入企业名称']")).sendKeys(corpname);

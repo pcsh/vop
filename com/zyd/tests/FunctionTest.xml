@@ -54,7 +54,7 @@
             </class>
         </classes>
    </test>
-      <test name="Test006_验证：业务管理-服务，直接在服务页面新增服务"  preserve-order="true"   >
+      <test name="Test007_验证：业务管理-服务，直接在服务页面新增服务"  preserve-order="true"   >
         <classes>
             <class name="com.zyd.tests.zydServiceAddTest" >
             <methods>

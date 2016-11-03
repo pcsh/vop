@@ -22,7 +22,7 @@ public class zydService {
 	@SuppressWarnings("static-access")
 	public void openPage(WebDriver driver) throws InterruptedException{
 		zydPageExist zydpe = new zydPageExist();
-		zydpe.PageExist("业务管理","服务","toolbarPluginbiz2020Frame",driver); 		
+		zydpe.PageExist("客户与合同","服务","toolbarPluginbiz2020Frame",driver); 		
 	}
 	
 	/*
@@ -80,6 +80,8 @@ public class zydService {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@name='startTime']")).sendKeys("2014-01-01");
 		Thread.sleep(1000);
+		driver.findElement(By.xpath("//*[@name='freeNumber']")).clear();
+		driver.findElement(By.xpath("//*[@name='freeNumber']")).click();
 		driver.findElement(By.xpath("//*[@name='freeNumber']")).sendKeys("12");
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//button[@clickaction='saveAddForm']")).click();

@@ -19,7 +19,7 @@ public class zydCorpOwner {
 	@SuppressWarnings("static-access")
 	public void openPage(WebDriver driver) throws InterruptedException{
 		zydPageExist zydpe = new zydPageExist();
-		zydpe.PageExist("业务管理","企业主","toolbarPluginbiz1010Frame",driver); 		
+		zydpe.PageExist("客户与合同","企业主","toolbarPluginbiz1010Frame",driver); 		
 	}
 	
 	/*

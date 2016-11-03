@@ -23,7 +23,8 @@ public class zydCorpOwnerPageTest {
 	profile.setEnableNativeEvents(false);
 	  WebDriver driver = new FirefoxDriver();
 	  zydLoginPage zlp = new zydLoginPage();
-	  zlp.login(driver, "http://172.16.6.151:9091/", "pancs_qd", "111111");
+	  zydEnvSet zes = new zydEnvSet(); 
+	  zlp.login(driver,zydEnvSet.loginurl_sit, zydEnvSet.loginuser_sit,zydEnvSet.loginpassword_sit);
 	  zydCorpOwner zco = new zydCorpOwner();
 	  zco.openPage(driver);
 	  String name = "AUTOADD02";
