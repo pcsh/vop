@@ -31,9 +31,10 @@ public class zydCorpAddTest {
 	  String Mobile = "18288889999";
 	  String Email = "18288889999@139.com";
 	  boolean isUserExistBeforeAdd = zco.QueryDatabaseCorpOwnerIsExist(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
-	  if(isUserExistBeforeAdd){
+	  boolean isOnlyouUserExistBeforeAdd = zco.QueryDatabaseOnlyouCorpOwnerIsExist(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit);
+	  if(isUserExistBeforeAdd||isOnlyouUserExistBeforeAdd){
 		  zco.DeleteCorpOwnerBySQL(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
-		  zco.DeleteOnlyouCorpOwnerBySQL(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit); 
+		  zco.DeleteOnlyouCorpOwnerBySQL(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit);
 	  }	 
 	  zco.Add(driver, corpowner, Mobile, Email, "18181818");
 	  zydPartnerInfo zpi = new zydPartnerInfo();

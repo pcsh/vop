@@ -43,6 +43,17 @@ public class zydCorpOwner {
 		}
 	}	
 	
+	public Boolean QueryDatabaseOnlyouCorpOwnerIsExist(String name,String Mobile,String Email,String union_id,String url,String username,String pwd) throws SQLException{
+		QueryData qd = new 	QueryData();		
+		if(qd.OnlyouUserExist(url,username,pwd,name,Mobile,Email)){
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}	
+	
 	/*
 	 * 业务管理-企业主，查询数据库中企业主是否已经存在
 	 */

@@ -31,9 +31,11 @@ public class zydOrderAddTest {
 	  String corpowner = "qyownertest";
 	  String Mobile = "18211119999";
 	  String Email = "18211119999@139.com";
-	  boolean isUserExistBeforeAdd = zco.QueryDatabaseCorpOwnerIsExist(corpowner,Mobile, Email, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
-	  if(isUserExistBeforeAdd){
+	  boolean isUserExistBeforeAdd = zco.QueryDatabaseCorpOwnerIsExist(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
+	  boolean isOnlyouUserExistBeforeAdd = zco.QueryDatabaseOnlyouCorpOwnerIsExist(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit);
+	  if(isUserExistBeforeAdd||isOnlyouUserExistBeforeAdd){
 		  zco.DeleteCorpOwnerBySQL(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
+		  zco.DeleteOnlyouCorpOwnerBySQL(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit);
 	  }	 
 	  zco.Add(driver, corpowner, Mobile, Email, "18181818");
 	  zydPartnerInfo zpi = new zydPartnerInfo();
@@ -42,7 +44,7 @@ public class zydOrderAddTest {
 	  zydCorp zc = new zydCorp();
 	  zc.openPage(driver);	 
 	  String corpname = "有合同的企业qy";
-	  boolean isCorpExistBeforeAdd = zc.QueryDatabaseCorpIsExist(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
+	  boolean isCorpExistBeforeAdd = zc.QueryDatabaseCorpIsExist(corpname, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
 	  if(isCorpExistBeforeAdd){
 		  zc.DeleteCorpBySQL(corpname, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
 	  }	
@@ -58,7 +60,6 @@ public class zydOrderAddTest {
 	  if(isOrderExistBeforAdd)
 	  {
 		  zo.DeleteOrderBySQL(corpname, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
-		  zco.DeleteOnlyouCorpOwnerBySQL(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit);
 	  }
 	  zo.Add(driver, corpname);
 	  boolean isOrderExistAfterAdd = zo.QueryDatabaseOrderIsExist(corpname, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);

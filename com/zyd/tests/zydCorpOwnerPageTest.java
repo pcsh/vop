@@ -27,16 +27,17 @@ public class zydCorpOwnerPageTest {
 	  zlp.login(driver,zydEnvSet.loginurl_sit, zydEnvSet.loginuser_sit,zydEnvSet.loginpassword_sit);
 	  zydCorpOwner zco = new zydCorpOwner();
 	  zco.openPage(driver);
-	  String name = "AUTOADD02";
+	  String corpowner = "AUTOADD02";
 	  String Mobile = "18288889997";
 	  String Email = "18288889997@139.com";
-	  boolean isExistBeforeAdd = zco.QueryDatabaseCorpOwnerIsExist(name,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
-	  if(isExistBeforeAdd){
-		  zco.DeleteCorpOwnerBySQL(name,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
-		  zco.DeleteOnlyouCorpOwnerBySQL(name,Mobile, Email, "1", zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit);
+	  boolean isUserExistBeforeAdd = zco.QueryDatabaseCorpOwnerIsExist(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
+	  boolean isOnlyouUserExistBeforeAdd = zco.QueryDatabaseOnlyouCorpOwnerIsExist(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit);
+	  if(isUserExistBeforeAdd||isOnlyouUserExistBeforeAdd){
+		  zco.DeleteCorpOwnerBySQL(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
+		  zco.DeleteOnlyouCorpOwnerBySQL(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit);
 	  }	  
-	  zco.Add(driver, name,Mobile, Email, "18181818");	
-	  boolean isExistAfterAdd = zco.QueryDatabaseCorpOwnerIsExist(name,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
+	  zco.Add(driver, corpowner,Mobile, Email, "18181818");	
+	  boolean isExistAfterAdd = zco.QueryDatabaseCorpOwnerIsExist(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
 	  Assert.assertTrue(isExistAfterAdd);
 	  driver.quit();
   }
