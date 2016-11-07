@@ -9,9 +9,9 @@ import org.openqa.selenium.interactions.Actions;
 public class zydPageExist {
 	     public static void PageExist(String str1,String str2,String str3,WebDriver driver) throws InterruptedException{
 	             
-	    	        Thread.sleep(2000);
+	    	        Thread.sleep(5000);
 	    	        driver.navigate().refresh();
-	                Thread.sleep(2000);
+	                Thread.sleep(5000);
 	    	        driver.switchTo().defaultContent();
 	                Thread.sleep(1000);            
 	                Actions builder1 = new Actions(driver);

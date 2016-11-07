@@ -30,12 +30,13 @@ public class zydCorpOwnerPageTest {
 	  String name = "AUTOADD02";
 	  String Mobile = "18288889997";
 	  String Email = "18288889997@139.com";
-	  boolean isExistBeforeAdd = zco.QueryDatabaseCorpOwnerIsExist(name,Mobile, Email, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
+	  boolean isExistBeforeAdd = zco.QueryDatabaseCorpOwnerIsExist(name,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
 	  if(isExistBeforeAdd){
-		  zco.DeleteCorpOwnerBySQL(name,Mobile, Email, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
+		  zco.DeleteCorpOwnerBySQL(name,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
+		  zco.DeleteOnlyouCorpOwnerBySQL(name,Mobile, Email, "1", zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit);
 	  }	  
 	  zco.Add(driver, name,Mobile, Email, "18181818");	
-	  boolean isExistAfterAdd = zco.QueryDatabaseCorpOwnerIsExist(name,Mobile, Email, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
+	  boolean isExistAfterAdd = zco.QueryDatabaseCorpOwnerIsExist(name,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
 	  Assert.assertTrue(isExistAfterAdd);
 	  driver.quit();
   }

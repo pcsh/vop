@@ -33,7 +33,7 @@ public class zydOrderAddTest {
 	  String Email = "18211119999@139.com";
 	  boolean isUserExistBeforeAdd = zco.QueryDatabaseCorpOwnerIsExist(corpowner,Mobile, Email, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
 	  if(isUserExistBeforeAdd){
-		  zco.DeleteCorpOwnerBySQL(corpowner,Mobile, Email, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
+		  zco.DeleteCorpOwnerBySQL(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
 	  }	 
 	  zco.Add(driver, corpowner, Mobile, Email, "18181818");
 	  zydPartnerInfo zpi = new zydPartnerInfo();
@@ -44,23 +44,24 @@ public class zydOrderAddTest {
 	  String corpname = "有合同的企业qy";
 	  boolean isCorpExistBeforeAdd = zc.QueryDatabaseCorpIsExist(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
 	  if(isCorpExistBeforeAdd){
-		  zc.DeleteCorpBySQL(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
+		  zc.DeleteCorpBySQL(corpname, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
 	  }	
 	  //zc.DeleteCorpBySQL(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
 	  zc.Add(driver, corpowner, corpname, corporg);
 	  Thread.sleep(5000);
-	  boolean isCorpExistAfterAdd = zc.QueryDatabaseCorpIsExist(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
+	  boolean isCorpExistAfterAdd = zc.QueryDatabaseCorpIsExist(corpname, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
 	  Assert.assertTrue(isCorpExistAfterAdd);  
 	  zydOrder zo = new zydOrder();
 	  zo.openPage(driver);
 	  zo.Query(driver);
-	  boolean isOrderExistBeforAdd = zo.QueryDatabaseOrderIsExist(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
+	  boolean isOrderExistBeforAdd = zo.QueryDatabaseOrderIsExist(corpname, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
 	  if(isOrderExistBeforAdd)
 	  {
-		  zo.DeleteOrderBySQL(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
+		  zo.DeleteOrderBySQL(corpname, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
+		  zco.DeleteOnlyouCorpOwnerBySQL(corpowner,Mobile, Email, "1", zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit);
 	  }
 	  zo.Add(driver, corpname);
-	  boolean isOrderExistAfterAdd = zo.QueryDatabaseOrderIsExist(corpname, "1", "jdbc:postgresql://172.16.11.35:5432/zyd_dev", "zyd_dev", "zyd_dev");
+	  boolean isOrderExistAfterAdd = zo.QueryDatabaseOrderIsExist(corpname, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit);
 	  Assert.assertTrue(isOrderExistAfterAdd);
 	  driver.quit();
   }

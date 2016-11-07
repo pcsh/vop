@@ -30,12 +30,12 @@ public class zydOpenStatisticsPageTest {
 	  zydLoginPage zlp = new zydLoginPage();
 	  zydEnvSet zes = new zydEnvSet(); 
 	  zlp.login(driver,zydEnvSet.loginurl_sit, zydEnvSet.loginuser_sit,zydEnvSet.loginpassword_sit);
-	  zydCorpServiceStatistics zcss = new zydCorpServiceStatistics();
+/*	  zydCorpServiceStatistics zcss = new zydCorpServiceStatistics();
 	  zcss.openPage(driver);
-	  zydCorpStatistics zcs = new zydCorpStatistics();
-	  zcs.openPage(driver);
 	  zydAccountCorpStatistics zacs = new zydAccountCorpStatistics();
 	  zacs.openPage(driver);
+	  zydCorpStatistics zcs = new zydCorpStatistics();
+	  zcs.openPage(driver);*/
 	  zydAccountDailyTskStatistics zadts = new zydAccountDailyTskStatistics();
 	  zadts.openPage(driver);
 	  zydAccountWorkStatistics zaws = new zydAccountWorkStatistics();

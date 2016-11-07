@@ -7,12 +7,12 @@ public class zydLoginPage {
 	public void login(WebDriver driver,String url,String username,String password) throws InterruptedException{
 	  driver.get(url);
 	  driver.manage().window().maximize();
-	  driver.findElement(By.name("userName")).click();
-	  driver.findElement(By.name("userName")).sendKeys(username);
+	  driver.findElement(By.name("username")).click();
+	  driver.findElement(By.name("username")).sendKeys(username);
 	  driver.findElement(By.name("password")).click();
 	  driver.findElement(By.name("password")).sendKeys(password);
 	  Thread.sleep(1000);
-	  driver.findElement(By.linkText("立即登录")).click();
+	  driver.findElement(By.className("btn-submit")).click();
 	  Thread.sleep(1000);
 	}
 }

@@ -57,6 +57,17 @@ public class zydCorpOwner {
 
 	}
 	
+	public void DeleteOnlyouCorpOwnerBySQL(String name,String Mobile,String Email,String union_id,String url,String username,String pwd) throws SQLException{
+		QueryData qd = new 	QueryData();		
+		  String sql_vop ="delete from t_onlyou_user "
+				  +"where name = '"+name+"' or mobile_phone_no ='"+Mobile+"' or email = '"+Email+"'";
+		//  String sql_onlyou="delete from t_onlyou_user "
+		//		  +"where name = '15880276011' or mobile_phone_no = '15880276011'";
+	      qd.DeleteData(url,username,pwd, sql_vop);
+	    //  qd.DeleteData("jdbc:postgresql://172.16.11.35:5432/onlyou_uat", "onlyou_uat", "onlyou_uat", sql_onlyou);
+
+	}
+	
 	/*
 	 * 业务管理-企业主，“新增”按钮
 	 */
