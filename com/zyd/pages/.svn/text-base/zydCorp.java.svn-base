@@ -77,14 +77,17 @@ public class zydCorp {
 		driver.findElement(By.xpath("//*[@name='contactEmail']")).sendKeys("6336308@139.com");
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@name='serAddrProvinceName']")).click();
-		driver.findElement(By.xpath("//*[@name='serAddrProvinceName']")).sendKeys("北京"+Keys.ENTER);
-		Thread.sleep(1000);
+		driver.findElement(By.xpath("//*[@name='serAddrProvinceName']")).sendKeys("北京");
+		driver.findElement(By.xpath("//td[contains(text(),'北京')]")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@name='serAddrCityName']")).click();
 		driver.findElement(By.xpath("//*[@name='serAddrCityName']")).sendKeys("北京"+Keys.ENTER);
-		Thread.sleep(1000);
+		//driver.findElement(By.id("serAddrCityNameTextDataGrid")).findElement(By.xpath("//td[contains(text(),'北京')]")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@name='serAddrAreaName']")).click();
 		driver.findElement(By.xpath("//*[@name='serAddrAreaName']")).sendKeys("东城区"+Keys.ENTER);
-		Thread.sleep(1000);
+		//driver.findElement(By.id("serAddrDistrictNameTextDataGrid")).findElement(By.xpath("//td[contains(text(),'东城区')]")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@name='serviceAddress']")).click();
 		driver.findElement(By.xpath("//*[@name='serviceAddress']")).sendKeys("长安街");
 		Thread.sleep(1000);
@@ -114,6 +117,44 @@ public class zydCorp {
 //		driver.findElement(By.xpath("//button[@clickaction='resetTableBtn']")).click();
 //		Thread.sleep(2000);
 	}	
+	
+	public void CorpBasicInfoEdit(
+			WebDriver driver,
+			String corpname,
+			String corpShortName,
+			String corpCode,
+			String contact) throws InterruptedException{
+		driver.findElement(By.id("name")).clear();
+		Thread.sleep(2000);
+		driver.findElement(By.id("queryDataId")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("name")).click();
+		driver.findElement(By.id("name")).sendKeys(corpname);
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@clickaction='queryGirdData']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.linkText("企业信息")).click();
+		Thread.sleep(2000);
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("toolbarPlugincor301Frame");
+		driver.findElement(By.xpath("//a[contains(text(),'联系信息')]")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.name("corpShortName")).clear();
+		driver.findElement(By.name("corpShortName")).click();
+		driver.findElement(By.name("corpShortName")).sendKeys(corpShortName);
+		Thread.sleep(1000);
+		driver.findElement(By.name("corpCode")).clear();
+		driver.findElement(By.name("corpCode")).click();
+		driver.findElement(By.name("corpCode")).sendKeys(corpCode);
+		Thread.sleep(1000);
+		driver.findElement(By.name("contact")).clear();
+		driver.findElement(By.name("contact")).click();
+		driver.findElement(By.name("contact")).sendKeys(contact);
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[@onclick='pageObj.stagingBtn(0)']")).click();
+		Thread.sleep(1000);				
+		
+	}
 	
 	/*从数据库删除对应的企业，合同，服务，任务
 	 * delete from t_vop_tsk_reg_task  where corp_id in (select corp.id from t_vop_cor_corp as corp where corp.name = 'autoqy') 

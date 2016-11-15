@@ -26,7 +26,7 @@ public class LoginPage {
 		          String pwds = strPasswdM;
 		          password.sendKeys(pwds);
 		          Thread.sleep(2000);
-		          WebElement LoginBtn = driver.findElement(By.xpath("//button[@class='btn-submit']"));
+		          WebElement LoginBtn = driver.findElement(By.className("btn-submit"));
 		          LoginBtn.click();
 		      Notice nc = new Notice();
 		      nc.NoticeSure(driver);

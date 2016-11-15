@@ -13,7 +13,7 @@ FunctionTest.xml
 K 25
 svn:wc:ra_dav:version-url
 V 126
-/svn/IOFTesting/!svn/ver/344/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/FunctionTest.xml
+/svn/IOFTesting/!svn/ver/366/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/FunctionTest.xml
 END
 zydLoginPageTestA.java
 K 25
@@ -38,6 +38,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 124
 /svn/IOFTesting/!svn/ver/362/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydEnvSet.java
+END
+zydCorpEdit.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/IOFTesting/!svn/ver/366/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydCorpEdit.java
 END
 zydOpenPartnerInfoPageTest.java
 K 25
