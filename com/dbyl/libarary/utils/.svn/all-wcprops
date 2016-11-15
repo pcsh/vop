@@ -51,6 +51,12 @@ svn:wc:ra_dav:version-url
 V 134
 /svn/IOFTesting/!svn/ver/252/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/libarary/utils/PageExist.java
 END
+JsClickByXpath.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/IOFTesting/!svn/ver/367/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/libarary/utils/JsClickByXpath.java
+END
 UITest.java
 K 25
 svn:wc:ra_dav:version-url
