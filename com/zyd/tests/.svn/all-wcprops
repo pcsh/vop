@@ -13,7 +13,7 @@ FunctionTest.xml
 K 25
 svn:wc:ra_dav:version-url
 V 126
-/svn/IOFTesting/!svn/ver/366/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/FunctionTest.xml
+/svn/IOFTesting/!svn/ver/368/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/FunctionTest.xml
 END
 zydLoginPageTestA.java
 K 25
@@ -79,7 +79,7 @@ zydUserAddTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 129
-/svn/IOFTesting/!svn/ver/367/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydUserAddTest.java
+/svn/IOFTesting/!svn/ver/368/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydUserAddTest.java
 END
 zydOpenUserManageTest.java
 K 25

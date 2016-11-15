@@ -72,4 +72,22 @@
             </class>
         </classes>
    </test>
+   <test name="Test009_验证：用户管理页面可以正常打开"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydOpenUserManageTest" >
+            <methods>
+	            <include name="OpenPage"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
+      <test name="Test010_验证：用户管理，新增用户"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydUserAddTest" >
+            <methods>
+	            <include name="AddUser"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
 </suite>

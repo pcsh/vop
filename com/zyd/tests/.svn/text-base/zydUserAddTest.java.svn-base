@@ -2,6 +2,7 @@ package com.zyd.tests;
 
 import org.testng.annotations.Test;
 
+import com.dbyl.libarary.utils.zydUserDelete;
 import com.zyd.pages.zydCorp;
 import com.zyd.pages.zydLoginPage;
 import com.zyd.pages.zydUserManage;
@@ -28,9 +29,11 @@ public class zydUserAddTest {
 	  zum.openPage(driver);
 	  String loginname = "zyd3_auto_user";
 	  String staffname = "账益达自动化用户姓名";
+	  zydUserDelete zud = new zydUserDelete();
+	  zud.DeleteUser(loginname, loginname, loginname, "1", zydEnvSet.DBurl_sit, zydEnvSet.DBuser_sit, zydEnvSet.DBpassword_sit, zydEnvSet.DBurl_Onlyou_sit, zydEnvSet.DBuser_Onlyou_sit, zydEnvSet.DBpassword_Onlyou_sit);
 	  zum.addUser(driver, loginname, staffname);
-	  
-	  zlp.login(driver,zydEnvSet.loginurl_sit, zydEnvSet.loginuser_sit,zydEnvSet.loginpassword_sit);
+	  zlp.loginout(driver);
+	  zlp.login(driver,zydEnvSet.loginurl_sit, loginname,"123456");
 	  driver.quit();
   }
 
