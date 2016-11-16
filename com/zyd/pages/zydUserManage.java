@@ -33,5 +33,21 @@ public class zydUserManage {
 		driver.findElement(By.xpath("//a[@clickaction='save']")).click();
 		Thread.sleep(2000);
 	}
+	
+	public void EditUser(WebDriver driver,String loginname) throws InterruptedException{
+		driver.findElement(By.id("queryUserId")).click();
+		driver.findElement(By.id("queryUserId")).sendKeys(loginname);
+		driver.findElement(By.xpath("//a[@clickaction='search']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("name")).click();
+		driver.findElement(By.id("name")).sendKeys(loginname);
+		driver.findElement(By.name("staffName")).click();
+		driver.findElement(By.name("staffName")).clear();
+		driver.findElement(By.name("orgName")).click();
+		driver.findElement(By.name("orgName")).clear();
+		driver.findElement(By.xpath("//body/div[1]/div[2]/div/div[2]/form//ul/li[7]/div/div/label[2]/i")).click();
+		driver.findElement(By.xpath("//a[@clickaction='save']")).click();
+		Thread.sleep(2000);
+	}
 
 }

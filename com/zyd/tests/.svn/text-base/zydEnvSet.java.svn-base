@@ -3,7 +3,7 @@ package com.zyd.tests;
 public class zydEnvSet {
 
 	//SIT
-	public static final String loginurl_sit = "http://z3.onlyou.com:8080/login.htm";
+	public static final String loginurl_sit = "http://z3.onlyou.com/login.htm";
 	public static final String loginuser_sit = "pancs_qd";
 	public static final String loginpassword_sit = "111111";
 	//DB_SIT
