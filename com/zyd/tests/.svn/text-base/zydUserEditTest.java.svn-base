@@ -18,7 +18,7 @@ public class zydUserEditTest {
  */
 	
 @Test
-  public static void AddUser() throws Exception {
+  public static void EditUser() throws Exception {
 	FirefoxProfile profile = new FirefoxProfile();
 	profile.setEnableNativeEvents(false);
 	  WebDriver driver = new FirefoxDriver();

@@ -3,11 +3,17 @@ svn:wc:ra_dav:version-url
 V 109
 /svn/IOFTesting/!svn/ver/345/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests
 END
+zydUserDeleteTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/IOFTesting/!svn/ver/370/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydUserDeleteTest.java
+END
 zydUserEditTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 130
-/svn/IOFTesting/!svn/ver/369/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydUserEditTest.java
+/svn/IOFTesting/!svn/ver/370/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydUserEditTest.java
 END
 zydOrderAddTest.java
 K 25
@@ -55,7 +61,7 @@ FunctionTest.xml
 K 25
 svn:wc:ra_dav:version-url
 V 126
-/svn/IOFTesting/!svn/ver/368/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/FunctionTest.xml
+/svn/IOFTesting/!svn/ver/370/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/FunctionTest.xml
 END
 zydLoginPageTestA.java
 K 25

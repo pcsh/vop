@@ -90,4 +90,22 @@
             </class>
         </classes>
    </test>
+        <test name="Test010_验证：用户管理，编辑用户"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydUserEditTest" >
+            <methods>
+	            <include name="EditUser"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
+        <test name="Test010_验证：用户管理，删除用户"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydUserDeleteTest" >
+            <methods>
+	            <include name="DeleteUser"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
 </suite>

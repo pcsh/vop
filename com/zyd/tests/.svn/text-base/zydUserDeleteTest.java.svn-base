@@ -11,14 +11,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 
-public class zydUserEditTest {
+public class zydUserDeleteTest {
 
 /*
  * 验证：用户管理，编辑用户信息
  */
 	
 @Test
-  public static void EditUser() throws Exception {
+  public static void DeleteUser() throws Exception {
 	FirefoxProfile profile = new FirefoxProfile();
 	profile.setEnableNativeEvents(false);
 	  WebDriver driver = new FirefoxDriver();
@@ -28,9 +28,8 @@ public class zydUserEditTest {
 	  zydUserManage zum = new zydUserManage();
 	  zum.openPage(driver);
 	  String loginname = "zyd3_auto_user";
-	  zum.EditUser(driver, loginname);
+	  zum.DeleteUser(driver, loginname);
 	  zlp.loginout(driver);
-	  zlp.login(driver,zydEnvSet.loginurl_sit, loginname,"123456");
 	  driver.quit();
   }
 
