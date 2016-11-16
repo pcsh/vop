@@ -17,7 +17,8 @@ public class zydLoginPage {
 	}
 	
 	public void loginout(WebDriver driver) throws InterruptedException{
-		driver.switchTo().defaultContent();
+		driver.navigate().refresh();
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//body/div[1]/div[1]/div/ul/li/span")).click();
 		driver.findElement(By.xpath("//a[@id='loginOut']")).click();
 		Thread.sleep(3000);

@@ -54,7 +54,9 @@ public class zydUserManage {
 		driver.findElement(By.xpath("//a[@clickaction='search']")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//a[@clickaction='del']")).click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//button[@i-id='ok']")).click();
+		Thread.sleep(3000);
 	}
 
 }
