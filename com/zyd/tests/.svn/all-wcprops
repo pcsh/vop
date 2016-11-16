@@ -61,7 +61,7 @@ FunctionTest.xml
 K 25
 svn:wc:ra_dav:version-url
 V 126
-/svn/IOFTesting/!svn/ver/370/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/FunctionTest.xml
+/svn/IOFTesting/!svn/ver/372/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/FunctionTest.xml
 END
 zydLoginPageTestA.java
 K 25
@@ -86,6 +86,24 @@ K 25
 svn:wc:ra_dav:version-url
 V 126
 /svn/IOFTesting/!svn/ver/366/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydCorpEdit.java
+END
+zydStaffAddTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/IOFTesting/!svn/ver/372/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydStaffAddTest.java
+END
+zydStaffDeleteTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/IOFTesting/!svn/ver/372/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydStaffDeleteTest.java
+END
+zydStaffEditTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/IOFTesting/!svn/ver/372/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydStaffEditTest.java
 END
 zydOpenStatisticsPageTest.java
 K 25

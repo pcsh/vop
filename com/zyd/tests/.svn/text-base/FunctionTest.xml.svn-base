@@ -90,7 +90,7 @@
             </class>
         </classes>
    </test>
-        <test name="Test010_验证：用户管理，编辑用户"  preserve-order="true"   >
+        <test name="Test011_验证：用户管理，编辑用户"  preserve-order="true"   >
         <classes>
             <class name="com.zyd.tests.zydUserEditTest" >
             <methods>
@@ -99,7 +99,34 @@
             </class>
         </classes>
    </test>
-        <test name="Test010_验证：用户管理，删除用户"  preserve-order="true"   >
+        <test name="Test012_验证：用户管理，删除用户"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydUserDeleteTest" >
+            <methods>
+	            <include name="DeleteUser"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
+         <test name="Test013_验证：员工档案，新增员工"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydStaffAddTest" >
+            <methods>
+	            <include name="AddStaff"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
+        <test name="Test014_验证：员工档案，编辑员工"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydStaffEditTest" >
+            <methods>
+	            <include name="EditStaff"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
+        <test name="Test015_验证：员工档案，删除员工"  preserve-order="true"   >
         <classes>
             <class name="com.zyd.tests.zydUserDeleteTest" >
             <methods>
