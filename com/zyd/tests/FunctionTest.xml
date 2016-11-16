@@ -135,4 +135,32 @@
             </class>
         </classes>
    </test>
+   
+            <test name="Test016_验证：角色管理，新增角色"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydRoleAddTest" >
+            <methods>
+	            <include name="AddRole"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
+        <test name="Test017_验证：角色管理，编辑角色"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydRoleEditTest" >
+            <methods>
+	            <include name="EditRole"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
+        <test name="Test018_验证：角色管理，删除角色"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydRoleDeleteTest" >
+            <methods>
+	            <include name="DeleteRole"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
 </suite>

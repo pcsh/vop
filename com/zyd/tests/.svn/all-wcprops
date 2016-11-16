@@ -61,7 +61,7 @@ FunctionTest.xml
 K 25
 svn:wc:ra_dav:version-url
 V 126
-/svn/IOFTesting/!svn/ver/372/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/FunctionTest.xml
+/svn/IOFTesting/!svn/ver/373/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/FunctionTest.xml
 END
 zydLoginPageTestA.java
 K 25
@@ -99,11 +99,29 @@ svn:wc:ra_dav:version-url
 V 133
 /svn/IOFTesting/!svn/ver/372/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydStaffDeleteTest.java
 END
+zydRoleAddTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/IOFTesting/!svn/ver/373/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydRoleAddTest.java
+END
+zydRoleDeleteTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/IOFTesting/!svn/ver/373/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydRoleDeleteTest.java
+END
 zydStaffEditTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 131
 /svn/IOFTesting/!svn/ver/372/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydStaffEditTest.java
+END
+zydRoleEditTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/IOFTesting/!svn/ver/373/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/zyd/tests/zydRoleEditTest.java
 END
 zydOpenStatisticsPageTest.java
 K 25
