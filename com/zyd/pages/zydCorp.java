@@ -53,9 +53,9 @@ public class zydCorp {
 		driver.findElement(By.id("aAdd")).click();
 		driver.findElement(By.xpath("//*[@name='ownerName']")).click();
 		driver.findElement(By.xpath("//*[@name='ownerName']")).sendKeys(corpowner);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
         JavascriptExecutor js6 = (JavascriptExecutor) driver;
-		WebElement webelement6 = driver.findElement(By.xpath("//td[contains(text(),'"+corpowner+"')]"));
+		WebElement webelement6 = driver.findElement(By.xpath("//span[contains(text(),'"+corpowner+"')]"));
 		js6.executeScript("arguments[0].click();",webelement6);
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@name='name' and @placeholder='请输入企业名称']")).click();
