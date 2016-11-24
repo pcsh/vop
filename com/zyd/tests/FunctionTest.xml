@@ -128,9 +128,9 @@
    </test>
         <test name="Test015_验证：员工档案，删除员工"  preserve-order="true"   >
         <classes>
-            <class name="com.zyd.tests.zydUserDeleteTest" >
+            <class name="com.zyd.tests.zydStaffDeleteTest" >
             <methods>
-	            <include name="DeleteUser"/>
+	            <include name="DeleteStaff"/>
             </methods>
             </class>
         </classes>
