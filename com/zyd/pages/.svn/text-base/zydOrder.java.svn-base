@@ -56,7 +56,7 @@ public class zydOrder {
 		driver.findElement(By.xpath("//*[@name='corpName']")).sendKeys(corpname);
 		Thread.sleep(1000);
         JavascriptExecutor js1 = (JavascriptExecutor) driver;
-		WebElement webelement1 = driver.findElement(By.xpath("//td[contains(text(),'"+corpname+"')]"));
+		WebElement webelement1 = driver.findElement(By.xpath("//span[contains(text(),'"+corpname+"')]"));
 		js1.executeScript("arguments[0].click();",webelement1);
 
 //		driver.findElement(By.xpath("//*[@name='corpName']")).sendKeys(Keys.ENTER);

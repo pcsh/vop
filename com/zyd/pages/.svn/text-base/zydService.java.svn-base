@@ -63,7 +63,7 @@ public class zydService {
 		driver.findElement(By.xpath("//*[@name='corpName']")).sendKeys(corpname);
 		Thread.sleep(2000);
 		List<WebElement> allSpanTexts =
-				driver.findElements(By.xpath("//td[contains(text(),'"+corpname+"')]"));
+				driver.findElements(By.xpath("//span[contains(text(),'"+corpname+"')]"));
 		Thread.sleep(2000);
         JavascriptExecutor js1 = (JavascriptExecutor) driver;
         WebElement webelement1 = allSpanTexts.get(allSpanTexts.size()-1);//"+strOrg+",选择页面的最后一个对象
