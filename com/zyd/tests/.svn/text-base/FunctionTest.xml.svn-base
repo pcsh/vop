@@ -163,4 +163,13 @@
             </class>
         </classes>
    </test>
+           <test name="Test019_验证：工作台建账功能"  preserve-order="true"   >
+        <classes>
+            <class name="com.zyd.tests.zydBuildAccountTest" >
+            <methods>
+	            <include name="CorpAdd"/>
+            </methods>
+            </class>
+        </classes>
+   </test>
 </suite>

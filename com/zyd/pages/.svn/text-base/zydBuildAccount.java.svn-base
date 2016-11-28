@@ -25,8 +25,8 @@ public class zydBuildAccount {
 	
 	public String AddCorp(WebDriver driver,String corpname,String corporg) throws InterruptedException{
 		Thread.sleep(2000);
-   		driver.findElement(By.xpath("//*[@name='name' and @placeholder='请输入企业名称']")).click();
-		driver.findElement(By.xpath("//*[@name='name' and @placeholder='请输入企业名称']")).sendKeys(corpname);
+   		driver.findElement(By.xpath("//*[@name='name']")).click();
+		driver.findElement(By.xpath("//*[@name='name']")).sendKeys(corpname);
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@name='contact']")).click();
 		driver.findElement(By.xpath("//*[@name='contact']")).sendKeys("pancs");
@@ -70,7 +70,7 @@ public class zydBuildAccount {
 		driver.findElement(By.xpath("//button[@clickaction='saveCorpInfo']")).click();
 		Thread.sleep(5000);
 		String currentWindow = driver.getWindowHandle(); 
-		driver.findElement(By.xpath("//button[@clickaction='继续建账']")).click();
+		driver.findElement(By.xpath("//button[@i-id='继续建账']")).click();
 		Thread.sleep(3000);
 		return currentWindow;
 	}	
@@ -80,7 +80,10 @@ public class zydBuildAccount {
 		sbt.SwitchTab(driver, currentWindow);
 		zydPageExist zpe = new zydPageExist();
 		zpe.PageExist("建账", "启用账套", "toolbarPluginsetting_612Frame", driver);
+		Thread.sleep(3000);
 		driver.findElement(By.id("setAcctBtn")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//button[@i-id='ok']")).click();
 		Thread.sleep(5000);
 	}
 	

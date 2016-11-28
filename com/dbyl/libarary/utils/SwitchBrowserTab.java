@@ -22,10 +22,11 @@ public class SwitchBrowserTab {
         }  
         WebDriver window = driver.switchTo().window(cruWindowString); 
     } 
-    System.out.println("url1 = " + driver.getCurrentUrl());  				 
-    driver.close();
-    WebDriver window = driver.switchTo().window(preWindowString); 
+    System.out.println("url1 = " + driver.getCurrentUrl());  
+    driver.manage().window().maximize();
+//    driver.close();
+//    WebDriver window = driver.switchTo().window(preWindowString); 
     //driver.navigate().to(url0);
-    System.out.println(driver.getCurrentUrl());	
+//    System.out.println(driver.getCurrentUrl());	
 	}
 }
