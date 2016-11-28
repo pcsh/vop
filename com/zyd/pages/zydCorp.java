@@ -51,6 +51,7 @@ public class zydCorp {
 	 */
 	public void Add(WebDriver driver,String corpowner,String corpname,String corporg) throws InterruptedException{
 		driver.findElement(By.id("aAdd")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@name='ownerName']")).click();
 		driver.findElement(By.xpath("//*[@name='ownerName']")).sendKeys(corpowner);
 		Thread.sleep(2000);
