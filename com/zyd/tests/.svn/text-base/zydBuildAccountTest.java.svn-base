@@ -27,8 +27,6 @@ public class zydBuildAccountTest {
 	  zydLoginPage zlp = new zydLoginPage();
 	  zydEnvSet zes = new zydEnvSet(); 
 	  zlp.login(driver,zydEnvSet.loginurl_sit, zydEnvSet.loginuser_sit,zydEnvSet.loginpassword_sit);
-	  zydBuildAccount zba = new zydBuildAccount();
-	  zba.openPage(driver);
 	  zydPartnerInfo zpi = new zydPartnerInfo();
 	  zpi.openPage(driver);
 	  String corporg = zpi.QueryPartnerName(driver);	
@@ -42,6 +40,8 @@ public class zydBuildAccountTest {
 	  zydWelcome zw = new zydWelcome();
 	  zw.openPage(driver);
 	  zw.buildaccount(driver);
+	  zydBuildAccount zba = new zydBuildAccount();
+	  zba.openPage(driver);
 	  String currentWindow = zba.AddCorp(driver, corpname, corporg);
 	  zba.BuildAccount(driver, currentWindow);
 	  driver.quit();
