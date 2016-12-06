@@ -79,7 +79,7 @@ public class zydCorp {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@name='serAddrProvinceName']")).click();
 		driver.findElement(By.xpath("//*[@name='serAddrProvinceName']")).sendKeys("北京");
-		driver.findElement(By.xpath("//td[contains(text(),'北京')]")).click();
+		//driver.findElement(By.xpath("//td[contains(text(),'北京')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@name='serAddrCityName']")).click();
 		driver.findElement(By.xpath("//*[@name='serAddrCityName']")).sendKeys("北京"+Keys.ENTER);
