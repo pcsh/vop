@@ -117,3 +117,9 @@ svn:wc:ra_dav:version-url
 V 125
 /svn/IOFTesting/!svn/ver/366/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/example/PrdTest.java
 END
+NewTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/IOFTesting/!svn/ver/404/02%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B/VOPTest/VOP/src/com/dbyl/example/NewTest.java
+END

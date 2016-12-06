@@ -14,7 +14,7 @@ public class zydLoginPage {
 	  Thread.sleep(1000);
 	  driver.findElement(By.className("btn-submit")).click();
 	  Thread.sleep(1000);
-	  driver.findElement(By.className("step1")).click();
+	  /*driver.findElement(By.className("step1")).click();
 	  Thread.sleep(1000);
 	  driver.findElement(By.className("step2")).click();
 	  Thread.sleep(1000);
@@ -22,7 +22,7 @@ public class zydLoginPage {
 	  Thread.sleep(1000);
 	  driver.findElement(By.className("step4")).click();
 	  Thread.sleep(1000);
-	  driver.findElement(By.className("step5")).click();
+	  driver.findElement(By.className("step5")).click();*/
 	  
 	}
 	

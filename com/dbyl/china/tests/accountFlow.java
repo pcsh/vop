@@ -278,6 +278,7 @@ public class accountFlow {
 				driver.findElement(By.linkText("知道了")).click();
 				Thread.sleep(2000);
 				//业务管理>合同（END）
+			
 				//业务管理>服务（BEGIN）
 				pe.PageExist("item-biz","item-biz2020","toolbarPluginbiz2020Frame",driver);
 				driver.findElement(By.linkText("新增")).click();
@@ -520,7 +521,6 @@ public class accountFlow {
 				 driver.switchTo().window(preWindowString); */
 				 Thread.sleep(5000);
 				//会计任务（END）
-				 
 				driver.quit();
   } 
   
