@@ -29,8 +29,8 @@ public class zydRoleAddTest {
 	  zlp.login(driver,zydEnvSet.loginurl_sit, zydEnvSet.loginuser_sit,zydEnvSet.loginpassword_sit);
 	  zydRoleManage zrm = new zydRoleManage();
 	  zrm.openPage(driver);
-	  String rolename = "自动化roleauto姓名";
-	  String rolecode = "rolecode";
+	  String rolename = "自动化roleauto姓名123";
+	  String rolecode = "rolecode123";
 	  zrm.addRole(driver, rolename, rolecode);
 	  Thread.sleep(3000);
 	  driver.quit();

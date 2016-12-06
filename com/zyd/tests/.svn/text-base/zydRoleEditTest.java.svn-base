@@ -29,7 +29,7 @@ public class zydRoleEditTest {
 	  zlp.login(driver,zydEnvSet.loginurl_sit, zydEnvSet.loginuser_sit,zydEnvSet.loginpassword_sit);
 	  zydRoleManage zrm = new zydRoleManage();
 	  zrm.openPage(driver);
-	  String rolecode = "rolecode";
+	  String rolecode = "rolecode123";
 	  zrm.EditRole(driver, rolecode);
 	  Thread.sleep(3000);
 	  driver.quit();
